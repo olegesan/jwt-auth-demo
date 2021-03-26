@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+auth-demo-11ec9-firebase-adminsdk-8obmq-3de5e9c22e.json
 
 # debug
 npm-debug.log*
@@ -29,6 +30,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
 
 # vercel
 .vercel
