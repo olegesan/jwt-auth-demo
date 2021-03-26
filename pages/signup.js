@@ -3,7 +3,7 @@ import Auth from "../Components/Auth";
 export default function Signin() {
   return (
     <>
-      <Auth kind="signin" />
+      <Auth kind="signup" />
     </>
   );
 }
