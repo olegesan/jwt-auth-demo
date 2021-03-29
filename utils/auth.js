@@ -7,14 +7,15 @@ import "firebase/functions";
 import { createContext, useContext, useEffect, useState } from "react";
 
 //set up firebase config (should not store this in your file. use environmental variables)
-console.log(process.env.APP_ID);
+//I had to start my env vars with NEXT_PUBLIC_ but if you don't use next.js
+// most likely you won't have to
 var firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: "auth-demo-11ec9.firebaseapp.com",
-  projectId: "auth-demo-11ec9",
-  storageBucket: "auth-demo-11ec9.appspot.com",
-  messagingSenderId: "70476490605",
-  appId: process.env.APP_ID,
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 // check if there are firebase apps initialized
