@@ -11,6 +11,13 @@ export default function Navbar() {
     <Flex flexFlow="row" justifyContent="space-around" m="5">
       <Link href="/">JWT Auth Demo</Link>
       <Text ml="5">{auth.user ? `Email: ${auth.user.email}` : ""}</Text>
+      {auth.user ? (
+        <Text ml="5">
+          <Link href="/protected"> Demo Authorization</Link>{" "}
+        </Text>
+      ) : (
+        ""
+      )}
       <Spacer />
       <Flex minW="md" flexFlow="row" justifyContent="space-around">
         {!auth.user ? (

@@ -7,13 +7,14 @@ import "firebase/functions";
 import { createContext, useContext, useEffect, useState } from "react";
 
 //set up firebase config (should not store this in your file. use environmental variables)
+console.log(process.env.APP_ID);
 var firebaseConfig = {
-  apiKey: "AIzaSyB2LSXqz7FalAczP9ZZ8MwUF1LiujUEQQo",
+  apiKey: process.env.API_KEY,
   authDomain: "auth-demo-11ec9.firebaseapp.com",
   projectId: "auth-demo-11ec9",
   storageBucket: "auth-demo-11ec9.appspot.com",
   messagingSenderId: "70476490605",
-  appId: "1:70476490605:web:126bfecbc7865039e2dc64",
+  appId: process.env.APP_ID,
 };
 
 // check if there are firebase apps initialized
