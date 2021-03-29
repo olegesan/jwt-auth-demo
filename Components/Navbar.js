@@ -5,6 +5,8 @@ import useAuth from "../utils/auth";
 export default function Navbar() {
   const auth = useAuth();
 
+  auth?.user?.getIdTokenResult().then((result) => console.log(result.claims));
+
   return (
     <Flex flexFlow="row" justifyContent="space-around" m="5">
       <Link href="/">JWT Auth Demo</Link>
