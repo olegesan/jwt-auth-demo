@@ -92,9 +92,9 @@ function useProvideAuth() {
 
   //cleans up on component unmount
   useEffect(() => {
-    const cleanup = firebase.auth().onAuthStateChanged((user) => {
+    const cleanup = firebase.auth().onAuthStateChanged(async (user) => {
       if (user) {
-        let token = user.getIdTokenResult(true);
+        let token = await user.getIdTokenResult(true);
         setAuthState({ state: "in", token });
         setUser(user);
       } else {
